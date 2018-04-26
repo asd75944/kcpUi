@@ -18,7 +18,7 @@ import kcpInput from './input/input'
 export default {
   data () {
     return {
-      input: '123'
+      input: '测试一下'
     }
   },
   components: {
