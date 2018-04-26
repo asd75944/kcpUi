@@ -1,0 +1,80 @@
+$kcpInput: kcp-input;
+$kcpInputInner: '.kcp-input-inner';
+$border-input: 1px solid #dcdfe6;
+$border-radius-input: 8px;
+#{ $kcpInputInner } {
+    padding: 0 15px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: $border-input;
+    border-radius: $border-radius-input;
+    color: #565a5a;
+    outline: none;
+    font-size: inherit;
+    background-color: #fff;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+}
+#{ $kcpInputInner }:focus {
+    border-color: $--color-primary;
+}
+.#{ $kcpInput } {
+    position: relative;
+    width: 180px;
+    display: inline-block;
+}
+.#{ $kcpInput }--medium #{ $kcpInputInner }{
+    height: 36px;
+    line-height: 36px;
+}
+.#{ $kcpInput }--small #{ $kcpInputInner }{
+    height: 30px;
+    line-height: 30px;
+}
+.#{ $kcpInput }--mini #{ $kcpInputInner }{
+    height: 24px;
+    line-height: 24px;
+}
+.#{ $kcpInput }.isDisabled #{ $kcpInputInner }{
+    background-color: #f5f7fa;
+    color: #c0c4cc;
+    cursor: not-allowed;
+}
+.#{ $kcpInput }.el-input-group {
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+.#{ $kcpInput }.el-input-group.el-input-group--prepend #{ $kcpInputInner } {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.#{ $kcpInput }.el-input-group.el-input-group--append #{ $kcpInputInner } {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.kcp-input-group__prepend,.kcp-input-group__append {
+    display: table-cell;
+    width: 1px;
+    padding: 0 20px;
+    line-height: normal;
+    border: $border-input;
+    border-radius: $border-radius-input;
+    background-color: #f5f7fa;
+    color: #909399;
+    vertical-align: middle;
+}
+.kcp-input-group__prepend {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.kcp-input-group__append {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.#{ $kcpInput }.isGroup #{ $kcpInputInner } {
+    display: table-cell;
+}
